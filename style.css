@@ -1,0 +1,149 @@
+	*{
+	  font-family: Lato;
+          font-weight: 250; 
+	}
+        header {
+          text-align: right;
+        }
+        header span {
+          margin-right: 45px;
+          line-height: 50px;
+          text-decoration: underline;
+          color: blue;
+	  cursor: pointer;
+        }
+        .active {
+          background-color: #fff0f0;
+          border-radius: 5px;
+        }
+        #screen {
+            max-width:1200;
+            text-align:center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
+        #central_text {
+        }
+        button {
+	  min-height: 50px;
+          border-radius: 5px;
+          margin-left: 20px;
+          margin-right: 20px;
+          
+	  border: 0;
+	  font-weight: bold;
+	  letter-spacing: 1px;
+	  font-size: 20px;
+	  line-height: 30px;
+	  cursor: pointer;
+          color: white;
+        }
+        #files a {
+          padding:20px;
+          
+        }
+        .green {
+         background-color: #11aa44; 
+        }
+         
+        .blue {
+         background-color: #1144aa;
+        }
+        #log {
+	  font-family: Mono;
+          font-weight: 250;
+          text-align: left;
+          background-color: #080000;
+          color: #88ffaa; 
+          width: 1000px;
+          max-width: 100%;
+	  font-size: 20px;
+	  line-height: 30px;
+        }
+        #log span {
+          padding:25px;
+        }
+        #send_form input {
+          margin: 8px;
+          font-size: 16px;
+          border: 1px solid;
+        } 
+        #notification {
+          background-color: #ffeeee;
+          max-width: 500px;
+          border-radius: 10px;
+	  font-size: 20px;
+	  line-height: 30px;
+          left: 50%;
+          transform: translate(-50%, -50%); 
+          position: fixed;
+          text-align:center;
+            margin-top: 25px; 
+        }
+        .error {
+           background-color: #ffeeee;
+           border-color: #aa0000;
+           color: #880000;
+        }
+        footer {
+           position: fixed;
+           bottom: 40px;
+           left: 50%;
+           width: 100%;
+           max-width: 800px;
+           text-align: center;
+           transform: translate(-50%, -50%);
+        }
+        footer span {
+           margin: 15px;
+        }
+@media only screen and (max-device-width: 600px)
+ {
+	*{
+	  font-family: Lato;
+          font-weight: 250; 
+          font-size: 25px;
+	}
+        h1 {
+          font-size: 100px;
+        }
+        h2 {
+          font-size: 45px;
+        }
+        h3 {
+          font-size: 40px;
+        }
+        header span {
+          font-size: 50px;
+        }
+        button {
+          font-size: 50px;
+          line-height: 80px;
+          min-height: 80px;
+          margin-top: 40px;
+        }
+        #files a {
+          padding:30px;
+          font-size:40px;          
+        }
+
+        #log {
+	  font-size: 35px;
+	  line-height: 45px;
+        }
+
+        #send_form {
+          margin: 8px;
+          font-size: 40px;
+        }
+        footer span {
+         font-size: 28px;	  
+        }
+        footer span a {
+         font-size: 28px;	  
+        }
+
+}
