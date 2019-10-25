@@ -126,10 +126,5 @@ function getaccount(address) {
 }
 
 function checkBigInt() {
-  try {
-    eval("BigInt(4)+3n");
-  } catch {
-    return false;
-  }
   return true;
 }
