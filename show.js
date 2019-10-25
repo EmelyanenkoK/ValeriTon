@@ -290,6 +290,7 @@ function show_sending() {
        Your <strong>wallet.addr</strong> (optional if standard wallet is used): <input type="file" id="address_key_file"><br>
        Address: <input type="text" placeholder="Address"  id="address" size="50" minLength="48"><br>
        Amount: <input type="number" step="0.000000001"  id="amount" min="1e-9"><br>
+       Optional comment: <input type="text" id="transfer_comment" maxLength="32" size="50"><br>
        <input type="submit" value="Send" onclick="send()" class="button">
      </form>
    </div>
@@ -321,6 +322,7 @@ async function send() {
   addr_key_files = document.getElementById("address_key_file").files;
   address = document.getElementById("address").value;
   amount = document.getElementById("amount").value;
+  var transfer_comment = document.getElementById("transfer_comment").value;
   addr = false;
   if (!private_key_files.length) {
     return show_error("Private key file is required");
@@ -337,7 +339,6 @@ async function send() {
       return show_error("Unknown format of account address");
   }
   keyPair = nacl.sign.keyPair.fromSeed(private_key);
-
   panel1 = `
    <h2>Creating wallet</h2>  
    <h3 id='current_action'></h3>
@@ -372,7 +373,8 @@ async function send() {
     keyPair,
     address,
     amount,
-    seq_no
+    seq_no,
+    transfer_comment
   );
   update_status("Bag of cells generated", false);
   update_status("Sending bag of cells");
